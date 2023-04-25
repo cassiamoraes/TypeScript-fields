@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Campos em TypeScript</title>
+</head>
+<body class="container">
+    <h1 class="text-center">Conferências</h1>
+
+    <form class="form">
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" class="form-control">
+        </div>
+
+        <div class="form">
+            <label for="nascimento">Nascimento</label>
+            <input type="date" id="nascimento" class="form-control">
+            <br>
+        </div>
+
+        <div class="form-group">
+            <label for="valor">Valor pago</label>
+            <input type="number" id="valor" class="form-control">
+            <br>
+        </div>
+        
+        <button class="btn btn-primary" type="submit">Verifica</button>
+    </form>
+
+    <br>
+    <div class="text-info"></div>
+
+    <div id="negociacoesView"></div>
+    <script type="module" src="js/app.js"></script>
+    
+</body>
+</html>
