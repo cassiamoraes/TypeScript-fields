@@ -1,10 +1,10 @@
  //modelo - definição da classe principal
  export class Conferencia{
-    private _nome
-    private _nascimento
-    private _valor
+    private _nome: String
+    private _nascimento: Date
+    private _valor: number
     
-    constructor(nome, nascimento, valor){
+    constructor(nome: String, nascimento: Date, valor: number){
         this._nome = nome
         this._nascimento = nascimento
         this._valor = valor
@@ -12,15 +12,15 @@
     }
 
      //getter de entrada
-     get nome(){
+     get nome(): String {
         return this._nome
      }
 
-     get nascimento(){
+     get nascimento(): Date {
         return this._nascimento
      }
 
-     get valor(){
+     get valor(): number {
         return this._valor
      }
 
