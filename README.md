@@ -43,7 +43,7 @@ a.text-info:hover, a.text-info:focus {
 }
 ```
 ```ts model
-get dados(){
+get dados(): void{
         return `Seu nome é: <strong>${this._nome}</strong> <br>
         Você nasceu em: <strong>${this._nascimento}</strong> <br>
         Você pagou: <strong>${this._valor}</strong>` 
@@ -54,19 +54,17 @@ get dados(){
 import { Conferencia } from "../models/conferencia.js"
 
 export class conferenciaController{
-    private imprime
+    private imprime: HTMLDivElement
 
     constructor(){
         this.imprime = document.querySelector('.text-info') 
     }
     
-    verifica(){
-        const conferencia = new Conferencia(
-            this.inputNome.value,
-            this.inputNascimento.value,
-            this.inputValor.value,
-        )
+    verifica(): void {
+        const conferencia = this.criaVerificacao()
+        console.log(conferencia)
         this.imprime.innerHTML = conferencia.dados
+        this.limpaFormulario()
     }
  }
 ```
